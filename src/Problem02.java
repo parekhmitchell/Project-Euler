@@ -8,6 +8,13 @@
  */
 public class Problem02 {
     public static void main(String[] args) {
-        
+        int sol = solution();
+        System.out.println("The sum of the even-valued terms in the Fibonacci sequence whose " +
+                "values do not exceed four million is: " + sol + ".");
     }
+
+    public static int solution() {
+        return 0;
+    }
+
 }
