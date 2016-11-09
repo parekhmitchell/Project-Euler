@@ -14,30 +14,19 @@ public class Problem05 {
     }
 
     public static long solution(int n) {
-        long high = 1;
-        for(long i = n; i >= 1; i--)
-            high *= i;
+        int guess = 1;
+        boolean flag = true;
 
-        ArrayList<Long> al = new ArrayList<Long>();
-        al.add(high);
-
-        for(long i = high; high >= 2; high--) {
-            boolean check = true;
-            for(long j = n; j >= 1; j--) {
-                if(i % j == 0 && j == 1 && check)
-                    //System.out.println(i);
-                    al.add(i);
-                else if(i % j != 0)
-                    check = false;
+        while(flag) {
+            for (int i = 1; i < 21; i++) {
+                if (guess % i != 0)
+                    break;
+                else if (i == 20)
+                    return guess;
             }
+            guess++;
         }
-
-        long minnie = al.get(0);
-        for(long i : al)
-            if(i <= minnie)
-                minnie = i;
-
-        return minnie;
+        return -1;
     }
 
 }
