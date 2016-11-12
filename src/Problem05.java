@@ -26,6 +26,7 @@ public class Problem05 {
             }
             guess++;
         }
+        //error if returned
         return -1;
     }
 
